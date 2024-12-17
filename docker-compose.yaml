@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: src/main/docker/Dockerfile.jvm
+    container_name: backend
+    ports:
+      - "8080:8080" # Porta dell'applicazione
+      - "5005:5005" # Porta per il debug (opzionale)
+    environment:
+      JAVA_OPTS_APPEND: "-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
+      JAVA_DEBUG: "true"        # Per abilitare il debug JVM
+      JAVA_DEBUG_PORT: "*:5005" # Porta del debug JVM
+    restart: unless-stopped
