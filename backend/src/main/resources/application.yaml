@@ -2,8 +2,19 @@ quarkus:
   live-reload:
     instrumentation: true
   smallrye-openapi:
-    path: /swagger
+    path: "/swagger"
   swagger-ui:
     always-include: true
-    path: /swagger-ui
-    title: My API Documentation  
+    path: "/swagger-ui"
+    title: "My API Documentation"
+  hibernate-orm:
+    database:
+      generation: "update"
+    log:
+      sql: true
+  datasource:
+    db-kind: "mssql"
+    jdbc:
+      url: "${DB_URL}"
+      driver: "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+      transactions: "XA"
