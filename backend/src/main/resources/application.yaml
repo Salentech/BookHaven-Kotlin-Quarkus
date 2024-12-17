@@ -1,0 +1,9 @@
+quarkus:
+  live-reload:
+    instrumentation: true
+  smallrye-openapi:
+    path: /swagger
+  swagger-ui:
+    always-include: true
+    path: /swagger-ui
+    title: My API Documentation  
