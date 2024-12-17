@@ -18,3 +18,5 @@ quarkus:
       url: "${DB_URL}"
       driver: "com.microsoft.sqlserver.jdbc.SQLServerDriver"
       transactions: "XA"
+  container-image:
+    build: false

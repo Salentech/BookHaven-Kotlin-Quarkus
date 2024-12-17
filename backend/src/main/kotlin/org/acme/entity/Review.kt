@@ -36,6 +36,15 @@ data class Review(
     @JoinColumn(name = "book_id")
     val book: Book
 ) {
+    constructor() : this(
+        id = null,
+        rating = Rating.DECENT,
+        comment = "",
+        createdAt = null,
+        reader = Reader(),
+        book = Book()
+    )
+
     @PrePersist
     fun prePersist() {
         if (createdAt == null) {

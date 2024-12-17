@@ -53,4 +53,15 @@ data class Book(
 
     @OneToMany(mappedBy = "book", cascade = [CascadeType.ALL], orphanRemoval = true)
     val bookCards: MutableList<BookCard> = mutableListOf()
-)
+) {
+    constructor() : this(
+        id = null,
+        title = "",
+        pages = 0,
+        description = "",
+        genre = "",
+        author = "",
+        url = "",
+        publishedYear = LocalDate.now()
+    )
+}

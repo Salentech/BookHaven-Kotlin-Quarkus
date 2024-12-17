@@ -34,4 +34,12 @@ data class Notification(
             createdAt = Instant.now()
         }
     }
+
+    constructor() : this(
+        id = null,
+        message = "",
+        createdAt = null,
+        isRead = false,
+        reader = Reader()
+    )
 }

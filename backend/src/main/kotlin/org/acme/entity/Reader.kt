@@ -57,6 +57,15 @@ data class Reader(
     )
     val friendSet: MutableSet<Reader> = mutableSetOf()
 ) {
+    constructor() : this(
+        id = null,
+        email = "",
+        username = "",
+        password = "",
+        age = null,
+        gender = Gender.OTHER,
+        bio = null
+    )
 
     fun addFriend(friend: Reader) {
         friendSet.add(friend)

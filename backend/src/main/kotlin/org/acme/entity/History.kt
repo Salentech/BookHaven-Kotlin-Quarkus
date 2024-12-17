@@ -30,4 +30,13 @@ data class History(
     @field:NotNull
     @JoinColumn(name = "book_id")
     val book: Book
-)
+) {
+    constructor() : this(
+        id = null,
+        startedReadAt = null,
+        lastReadAt = null,
+        isRead = false,
+        reader = Reader(),
+        book = Book()
+    )
+}

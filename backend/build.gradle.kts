@@ -10,7 +10,7 @@ repositories {
 }
 
 // Extracted constants for repeated values
-val JAKARTA_VALIDATION_VERSION = "3.1.0"
+val jakartaValidationVersion = "3.1.0"
 
 // Renamed variables for clarity
 val platformGroupId: String by project
@@ -24,7 +24,7 @@ dependencies {
     implementation("io.quarkus:quarkus-rest-jackson")
     implementation("io.quarkus:quarkus-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("jakarta.validation:jakarta.validation-api:$JAKARTA_VALIDATION_VERSION")
+    implementation("jakarta.validation:jakarta.validation-api:$jakartaValidationVersion")
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-rest")
     implementation("io.quarkus:quarkus-smallrye-openapi")
@@ -38,7 +38,7 @@ dependencies {
 }
 
 group = "org.acme"
-version = "1.0.0-SNAPSHOT"
+version = "1.0.0"
 
 // Java configurations
 java {

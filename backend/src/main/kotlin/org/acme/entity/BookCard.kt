@@ -23,4 +23,11 @@ data class BookCard(
     @field:NotNull
     @JoinColumn(name = "book_id")
     val book: Book
-)
+) {
+    constructor() : this(
+        id = null,
+        title = "",
+        body = "",
+        book = Book()
+    )
+}
