@@ -4,12 +4,20 @@
 !**/gradle/wrapper/gradle-wrapper.jar
 .gradle-cache/
 
+# Backend: Quarkus/Kotlin/Gradle
+backend/.gradle/
+backend/.kotlin/
+backend/build/
+backend/test-results/
+backend/reports/
+backend/coverage/
+
 # IntelliJ IDEA
 .idea/
 *.iml
-out/
 *.ipr
 *.iws
+out/
 
 # Kotlin specific
 *.class
@@ -18,25 +26,38 @@ out/
 *.ear
 *.kotlin_module
 
-# Module specific: backend (Quarkus/Kotlin/Gradle)
-backend/.gradle/
-backend/build/
-backend/.kotlin/
-
 # Logs
 *.log
-
-# Testing / Coverage reports
-backend/test-results/
-backend/reports/
-backend/coverage/
-
-# Operating system files
-.DS_Store
-Thumbs.db
-*.swp
 
 # Environment specific files
 .env
 .vscode/
 node_modules/
+
+# Local environment & TLS
+.certs/
+
+# Editor files
+*.swp
+*.swo
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# NetBeans
+nb-configuration.xml
+
+# Visual Studio Code
+.vscode/
+.factorypath
+
+# Patch files
+*.orig
+*.rej
