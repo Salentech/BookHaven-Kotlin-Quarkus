@@ -1,0 +1,42 @@
+# Gradle
+.gradle/
+**/build/
+!**/gradle/wrapper/gradle-wrapper.jar
+.gradle-cache/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+*.ipr
+*.iws
+
+# Kotlin specific
+*.class
+*.jar
+*.war
+*.ear
+*.kotlin_module
+
+# Module specific: backend (Quarkus/Kotlin/Gradle)
+backend/.gradle/
+backend/build/
+backend/.kotlin/
+
+# Logs
+*.log
+
+# Testing / Coverage reports
+backend/test-results/
+backend/reports/
+backend/coverage/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+*.swp
+
+# Environment specific files
+.env
+.vscode/
+node_modules/
